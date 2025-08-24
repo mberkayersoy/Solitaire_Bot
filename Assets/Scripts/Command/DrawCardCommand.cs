@@ -17,7 +17,6 @@ public class DrawCardCommand : ICommand
         _movedCards = new List<CardData>();
         _playedToTarget = false;
     }
-    public bool IsApplied { get; set; }
     public MoveType MoveType => MoveType.StockToWaste;
     public void Apply()
     {
@@ -59,11 +58,9 @@ public class DrawCardCommand : ICommand
             _wastePile.AddCard(lastDrawn);
             _playedToTarget = false;
         }
-        IsApplied = true;
     }
     public void Undo()
     {
-
         if (_playedToTarget && _targetPile.HasCard() && _targetPile.GetTopCard() == _card)
         {
             _targetPile.RemoveCard(_card);
@@ -81,6 +78,5 @@ public class DrawCardCommand : ICommand
         }
         _movedCards.Clear();
         _playedToTarget = false;
-        IsApplied = false;
     }
 }

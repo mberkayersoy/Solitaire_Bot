@@ -14,10 +14,8 @@ public class RefillStockCommand : ICommand
             return MoveType.Refill;
         }
     }
-    public bool IsApplied { get; set; }
     public void Apply()
     {
-        IsApplied = true;
         while (_wastePile.HasCard())
         {
             var card = _wastePile.GetTopCard();
@@ -33,6 +31,5 @@ public class RefillStockCommand : ICommand
             _stockPile.RemoveCard(card);
             _wastePile.AddCard(card);
         }
-        IsApplied = false;
     }
 }

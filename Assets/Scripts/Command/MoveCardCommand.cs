@@ -31,8 +31,6 @@ public class MoveCardCommand : ICommand
         }
     }
 
-    public bool IsApplied { get; set; }
-
     public void Apply()
     {
         IList<CardData> cards;
@@ -55,7 +53,6 @@ public class MoveCardCommand : ICommand
             cardBelow.IsFaceUp = true;
             _wasTopCardFlipped = true;
         }
-        IsApplied = true;
     }
     public void Undo()
     {
@@ -79,6 +76,5 @@ public class MoveCardCommand : ICommand
 
         _targetPile.RemoveCards(cards);
         _sourcePile.AddCards(cards);
-        IsApplied = false;
     }
 }
