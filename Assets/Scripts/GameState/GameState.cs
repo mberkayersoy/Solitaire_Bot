@@ -17,13 +17,6 @@ public class GameState
         _deck = deck;
         DealCards();
     }
-    public GameState(List<TableauPile> tableaus, Dictionary<Suit, FoundationPile> foundations, WastePile waste, StockPile stock, DrawType drawType)
-    {
-        Tableaus = tableaus;
-        Foundations = foundations;
-        Waste = waste;
-        Stock = stock;
-    }
     // Instead of directly checking all foundation piles,
     // check if all cards in the tableau are face-up to avoid creating extra states.
     // If all tableau cards are face-up, the game is effectively in a winning state.
@@ -41,8 +34,6 @@ public class GameState
         }
         return true;
     }
-
-
     private void DealCards()
     {
         Tableaus = new List<TableauPile>();
@@ -103,6 +94,4 @@ public class GameState
 
         return hash;
     }
-
-
 }
