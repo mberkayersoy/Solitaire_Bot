@@ -1,0 +1,18 @@
+{
+    "name": "DeckSolver",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9c30ae0ecb64e45538d831aa810cc8e5",
+        "GUID:894a5f0ad213c4d25b4c5c768f3cca59",
+        "GUID:f0eef1bb9873847b7b534c3cb051dd77"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,16 @@
+{
+    "name": "GameState",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9c30ae0ecb64e45538d831aa810cc8e5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
